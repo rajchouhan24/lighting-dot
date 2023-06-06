@@ -1,0 +1,174 @@
+$tile-off: #003566;
+$tile-on: #5686b5;
+$accent: #4a4169;
+$text: #fff;
+
+$header: 'Libre Baskerville', serif;
+$body: 'Source Sans Pro', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color:hsla(260,2%,0%,1);
+    background-image:
+    radial-gradient(at 31% 7%, hsla(254,40%,11%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(208,68%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 31% 17%, hsla(254,40%,11%,1) 0px, transparent 50%),
+    radial-gradient(at 52% 61%, hsla(255,26%,25%,1) 0px, transparent 50%),
+    radial-gradient(at 16% 99%, hsla(253,19%,43%,1) 0px, transparent 50%),
+    radial-gradient(at 12% 18%, hsla(250,26%,32%,1) 0px, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $text;
+    font-family: $body;
+
+    h1 {
+        font-size: 3.5rem;
+        text-shadow: 1px 5px 4px $tile-on;
+        margin-bottom: 2rem;
+        color: transparent;
+        font-family: $header;
+        text-transform: uppercase;
+    }
+}
+
+/*        GAME BOARD STYLES          */
+
+.game-container {
+    width: 22rem;
+
+    #game {
+        height: 22rem;
+        position: relative;
+
+        #play, #win, #tiles {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #start, #playAgain {
+            background: none;
+            padding: .75rem 1.25rem;
+            border-radius: 2.25rem;
+            border: 2px solid $tile-on;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $tile-on;
+            letter-spacing: 2px;
+            transition: all 150ms linear;
+
+            &:hover {
+                cursor: pointer;
+                background: $tile-on;
+                color: $tile-off;
+            }
+        }
+
+        #play {
+            display: flex;
+        }
+
+        #win {
+            flex-direction: column;
+            display: none;
+
+            span {
+                font-size: 5rem;
+                font-family: $header;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+        }
+
+        #tiles {
+            display: none;
+            flex-wrap: wrap;
+
+            .tile {
+                border: 1px solid $tile-off;
+                height: 4rem;
+                width: 4rem;
+                margin: .1rem;
+                border-radius: 50%;
+                transition: all 150ms linear;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid $tile-on;
+                }
+            }
+
+            .on {
+                border: 2px solid $tile-on;
+                box-shadow: inset 0 0 1rem $tile-on;
+                transition: all 150ms linear;
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px solid #71a5d9;
+                }
+            }
+        }
+    }
+
+    /*        GAME DETAILS STYLES          */
+ 
+    .sidebar {
+        width: 22rem;
+        padding: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        #score {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, 0.5);
+            padding: .2rem .5rem;
+            letter-spacing: 1px;
+
+            #count {
+                font-size: 2rem;
+                color: $text;
+            }
+        }
+            
+        #reset {
+            background: none;
+            border-radius: 1.5rem;
+            padding: 0 .75rem;
+            border: 1px solid $tile-on;
+            font-size: .75rem;
+            text-transform: uppercase;
+            color: $tile-on;
+            transition: all 150ms linear;
+                
+            &:hover {
+                cursor: pointer;
+                color: $tile-off;
+                background: $tile-on;
+                border: 1px solid $tile-off;
+            }
+        }
+        
+        #rules {
+            padding-top: .5rem;
+            margin-top: 1rem;
+            font-size: .78rem;
+            text-align: center;
+            color: #ffffff50;
+            border-top: 1px solid #ffffff50;
+        }
+    }
+}

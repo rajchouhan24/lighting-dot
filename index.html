@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Lights Out</title>
+</head>
+<body>
+    <h1>Lights Out</h1>
+        
+        <main class="game-container">
+            <section id="game">
+                
+                <div id="play">
+                    <button id="start">Start</button>
+                </div>
+
+                <div id="win">
+                    <span>WIN!</span>
+                    <input id="playAgain" type="button" value="Play Again?" onClick="location.href=location.href">
+                </div>
+
+                <div id="tiles">
+                    <div id="1" class="tile cornerTL"></div>
+                    <div id="2" class="tile edgeT"></div>
+                    <div id="3" class="tile edgeT"></div>
+                    <div id="4" class="tile edgeT"></div>
+                    <div id="5" class="tile cornerTR"></div>
+                    <div id="6" class="tile edgeL"></div>
+                    <div id="7" class="tile middle"></div>
+                    <div id="8" class="tile middle"></div>
+                    <div id="9" class="tile middle"></div>
+                    <div id="10" class="tile edgeR"></div>
+                    <div id="11" class="tile edgeL"></div>
+                    <div id="12" class="tile middle"></div>
+                    <div id="13" class="tile middle"></div>
+                    <div id="14" class="tile middle"></div>
+                    <div id="15" class="tile edgeR"></div>
+                    <div id="16" class="tile edgeL"></div>
+                    <div id="17" class="tile middle"></div>
+                    <div id="18" class="tile middle"></div>
+                    <div id="19" class="tile middle"></div>
+                    <div id="20" class="tile edgeR"></div>
+                    <div id="21" class="tile cornerBL"></div>
+                    <div id="22" class="tile edgeB"></div>
+                    <div id="23" class="tile edgeB"></div>
+                    <div id="24" class="tile edgeB"></div>
+                    <div id="25" class="tile cornerBR"></div>
+                </div> 
+            </section>
+
+            <section class="sidebar">
+                <p id="score"><span id="count">0</span> Moves</p>
+                <input id="reset" type="button" value="New Game" onClick="location.href=location.href">
+                <p id="rules">Selecting any of the lights will toggle it and the adjacent lights. To win the game, turn off all lights in as few moves as possible.</p>
+            </section>
+        </main>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
