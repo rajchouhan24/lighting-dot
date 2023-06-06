@@ -15,7 +15,6 @@ HTML/CSS/JavaScript
 
 ### Recent Updates
 Changed styles
-Minor refactoring
 
 ## Contact
 
